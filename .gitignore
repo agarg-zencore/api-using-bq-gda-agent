@@ -1,0 +1,23 @@
+target/
+.idea/
+*.iml
+.classpath
+.project
+.settings/
+.factorypath
+
+# Local config
+application-local.yml
+.env
+
+# Python (legacy doc script only)
+.venv/
+__pycache__/
+*.pyc
+
+# OS
+.DS_Store
+
+# Build artifacts
+*.jar
+!target/bq-agent-api-*.jar

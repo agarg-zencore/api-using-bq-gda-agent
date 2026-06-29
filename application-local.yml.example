@@ -1,0 +1,9 @@
+spring:
+  config:
+    activate:
+      on-profile: local
+
+app:
+  gcp-project-id: bq-agent-poc-500313
+  gcp-location: us
+  data-agent-id: agent_c2454530-1ce3-47ee-a335-31ef826b3227

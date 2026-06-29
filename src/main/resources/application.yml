@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: bq-agent-api
+
+server:
+  port: ${PORT:8080}
+
+app:
+  gcp-project-id: ${GCP_PROJECT_ID:bq-agent-poc-500313}
+  gcp-location: ${GCP_LOCATION:us}
+  data-agent-id: ${DATA_AGENT_ID:agent_c2454530-1ce3-47ee-a335-31ef826b3227}
+  vertex-location: ${VERTEX_LOCATION:us-central1}
+  # Use literals for local dev. Empty env vars like VERTEX_SESSIONS_ENGINE_ID=
+  # override ${VAR:default} placeholders with blank — unset them if unused.
+  sessions-engine-id: 5090605245940105216
+  memory-bank-engine-id: 4174122721770209280
+  default-user-id: ${DEFAULT_USER_ID:default-user}
+  chat-timeout-seconds: ${CHAT_TIMEOUT_SECONDS:300}
+  feedback-dataset: ${FEEDBACK_DATASET:agent_feedback}
+  feedback-table: ${FEEDBACK_TABLE:agent_feedback}
+  feedback-auto-create-table: ${FEEDBACK_AUTO_CREATE_TABLE:true}
+
+logging:
+  level:
+    com.zencore.bqagent: INFO
